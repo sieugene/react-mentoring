@@ -8,4 +8,5 @@ export type Component<P extends {} = {}> = (args: {
   mount: () => void;
   node?: () => HTMLElement | null;
   subscribe?: (listener: Listener) => () => void;
+  getRawTemplate?: () => string
 };

@@ -1,6 +1,9 @@
 import { Component, Listener } from "./types";
+import { Area } from "./ui/Area.js";
 
 export const App: Component = ({ renderFrame }) => {
+  const AreaComponent = Area({});
+
   let listeners: Listener[] = [];
   const RENDER_ID = "App";
   let state = {
@@ -25,6 +28,7 @@ export const App: Component = ({ renderFrame }) => {
 		  <button id="increment">increment</button>
 		  <button id="decrement">decrement</button>
 		  <h2>Count: ${state.count}</h2>
+      ${AreaComponent.getRawTemplate?.()} 
 	  </div>
 	  `;
   };
